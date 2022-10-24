@@ -1,0 +1,14 @@
+.ad {
+  color: white;
+  font-weight: 900;
+  font-size: 40px;
+}
+.cover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

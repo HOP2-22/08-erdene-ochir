@@ -1,0 +1,35 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.column{
+  display: flex;
+  flex-direction: column;
+}
+.inp{
+  border: none;
+  border-radius: 10px;
+  width: 90px;
+  height: 25px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.but{
+  border: none;
+  border-radius: 10px;
+  height: 35px;
+  width: 100px;
+  background-color: rgb(51, 143, 255);
+  color: white;
+}
+.line{
+  width: 85px;
+  height: 1px;
+  background-color: black;
+  margin-left: 24px;
+}

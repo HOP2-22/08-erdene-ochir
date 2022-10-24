@@ -1,0 +1,30 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(235, 235, 235);
+}
+.back{
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  margin-top: 35px;
+  border: 5px solid rgb(251, 251, 251);
+  box-shadow: 100px grey;
+  flex-direction: column;
+}
+.com{
+  margin-left: 35px;
+}
+.name{
+  margin-left: 35px;
+  margin-top: 40px;
+}
+.img{
+  margin-left: 30px;
+}
+.star{
+  margin-left: 30px;
+}

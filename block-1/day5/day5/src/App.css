@@ -1,0 +1,24 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.userCard{
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  margin-top: 35px;
+  border: 5px solid rgb(234, 234, 234);
+  border-radius: 15px;
+  box-shadow: 10px;
+}
+.info{
+  margin-top: 100px;
+}
+.search{
+  height: 50px;
+  width: 550px;
+  margin-top: 30px;
+  border: 5px solid rgb(24, 124, 255);
+  border-radius: 15px;
+}
