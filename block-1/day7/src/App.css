@@ -1,14 +1,100 @@
-.ad {
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap");
+.add {
+  font-family: mulish;
   color: white;
   font-weight: 900;
-  font-size: 40px;
+  font-size: 48px;
+  height: 120px;
+  width: 514;
 }
 .cover {
+  font-family: mulish;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
+  width: 100vw;
   display: flex;
+  background-size: cover;
   align-items: center;
   justify-content: center;
+  background-image: url("./back.png");
+}
+.navb {
+  font-family: mulish;
+  margin-left: 800px;
+}
+.ad {
+  font-family: mulish;
+  display: flex;
+  flex-direction: column;
+  margin-left: -1400px;
+}
+.addd {
+  font-family: mulish;
+  color: white;
+  height: 58px;
+  width: 324px;
+  font-weight: 700;
+  margin-top: 50px;
+  font-size: 18px;
+  line-height: 30px;
+}
+.button {
+  font-family: mulish;
+  color: white;
+  height: 56px;
+  width: 164px;
+  background-color: #0bbef2;
+  border: none;
+  border-radius: 5px;
+  margin-left: 30px;
+}
+.input {
+  font-family: mulish;
+  height: 56px;
+  width: 317px;
+}
+.bottom {
+  font-family: mulish;
+  margin-top: 50px;
+}
+.coverr {
+  font-family: mulish;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+}
+.logo {
+  font-family: mulish;
+  height: 60px;
+  width: 87px;
+  color: white;
+  font-size: xxx-large;
+  font-weight: 1000;
+  margin-left: 400px;
+}
+.navbb {
+  font-family: mulish;
+  color: white;
+  font-weight: 700;
+  font-size: large;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+}
+.na {
+  color: white;
+  text-decoration: none;
+}
+.navbut {
+  height: 56px;
+  width: 128px;
+  color: rgb(172, 172, 172);
+  background-color: transparent;
+  border: 3px solid rgb(172, 172, 172);
+  border-radius: 10px;
 }
