@@ -1,6 +1,5 @@
-import "./App.css";
-import React, { useState } from "react";
-
+import React from "react";
+import "../styles/Cards.css";
 const cardData = [
   {
     star: 1,
@@ -75,23 +74,20 @@ export const Card = (props) => {
     </div>
   );
 };
-function App() {
+export const Cards = () => {
   return (
-    <div>
-      <div style={{ display: "flex", flexDirection: "row", gap: 10 }}>
-        {cardData.map((data) => {
-          return (
-            <Card
-              starNumber={data.star}
-              comment={data.comment}
-              avatar={data.avatar}
-              name={data.name}
-            />
-          );
-        })}
-      </div>
+    <div style={{ display: "flex", flexDirection: "row", gap: 10 }}>
+      {cardData.map((data) => {
+        return (
+          <Card
+            starNumber={data.star}
+            comment={data.comment}
+            avatar={data.avatar}
+            name={data.name}
+          />
+        );
+      })}
     </div>
   );
-}
-
-export default App;
+};
+export default Cards;
