@@ -75,10 +75,9 @@ body {
   font-family: mulish;
   height: 60px;
   width: 87px;
-  color: rgb(175, 175, 175);
+  color: rgb(255, 255, 255);
   font-size: xxx-large;
   font-weight: 1000;
-  margin-left: 400px;
 }
 .navbb {
   font-family: mulish;
@@ -91,7 +90,7 @@ body {
   top: 0;
 }
 .na {
-  color: rgb(175, 175, 175);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   padding-left: 30px;
 }
@@ -99,15 +98,15 @@ body {
   height: 56px;
   width: 128px;
   padding: 5px 20px;
-  color: rgb(172, 172, 172);
+  color: rgb(156, 156, 156);
   background-color: transparent;
-  border: 3px solid rgb(172, 172, 172);
+  border: 3px solid rgb(156, 156, 156);
   border-radius: 10px;
   text-align: center;
   text-decoration: none;
 }
 .navbutt {
-  color: rgb(175, 175, 175);
+  color: rgb(156, 156, 156);
   text-decoration: none;
 }
 .enter {

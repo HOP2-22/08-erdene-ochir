@@ -4,13 +4,14 @@ import { Link } from "react-router-dom";
 import NavigationBar from "../components/Header";
 import Cards from "../components/Cards";
 import Meet from "../components/Meet";
+import Footer from "../components/Footer";
+import Bozo from "../components/Bozo";
 const Home = () => {
   const [inputValue, setInputValue] = useState({
     email: "",
   });
   return (
     <div>
-      <NavigationBar />
       <div className="cover">
         <div className="ad">
           <div className="add">
@@ -44,6 +45,7 @@ const Home = () => {
         </div>
       </div>
       <Meet />
+      <Bozo />
       <Cards />
     </div>
   );

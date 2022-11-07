@@ -15,7 +15,7 @@ export const Meet = () => {
           <div>one place.</div>
         </div>
       </div>
-      <img className="img" src="meet.png" />
+      <img className="imge" src="meet.png" />
     </div>
   );
 };

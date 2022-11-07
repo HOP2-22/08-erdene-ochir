@@ -76,17 +76,29 @@ export const Card = (props) => {
 };
 export const Cards = () => {
   return (
-    <div style={{ display: "flex", flexDirection: "row", gap: 10 }}>
-      {cardData.map((data) => {
-        return (
-          <Card
-            starNumber={data.star}
-            comment={data.comment}
-            avatar={data.avatar}
-            name={data.name}
-          />
-        );
-      })}
+    <div
+      className="cardsWTSAU"
+      style={{ display: "flex", flexDirection: "column" }}
+    >
+      <h1 className="wtsau">What they say about us</h1>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          gap: 20,
+        }}
+      >
+        {cardData.map((data) => {
+          return (
+            <Card
+              starNumber={data.star}
+              comment={data.comment}
+              avatar={data.avatar}
+              name={data.name}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };
