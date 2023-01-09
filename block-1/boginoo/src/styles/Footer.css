@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap");
+.mnb {
+  background-color: rgb(4, 8, 38);
+  font: mulish;
+  color: white;
+  height: 400px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+.fst {
+  font: mulish;
+  font-size: 56px;
+  font-weight: 800;
+  padding-top: 40px;
+}
+.layerone {
+  font: mulish;
+  font-size: 23px;
+  font-weight: 600;
+}
+.roww {
+  display: flex;
+  flex-direction: row;
+}
+.columnn {
+  display: flex;
+  flex-direction: column;
+}
+.instaimg {
+  height: 22px;
+  margin-top: 5px;
+  width: 22px;
+}
+.rest {
+  font: mulish;
+  font-size: 36px;
+  font-weight: 800;
+  padding-top: 55px;
+}
+.sub {
+  font: mulish;
+  font-size: 46px;
+  font-weight: 800;
+  padding-top: 55px;
+}
+.inputtt {
+  height: 56px;
+  width: 300px;
+  border: none;
+  border-radius: 5px;
+}

@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap");
+.col {
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.imge {
+  height: 1100px;
+  width: 45vw;
+  margin-top: 150px;
+}
+.m1 {
+  font-size: 70px;
+  font-weight: 800;
+  font: mulish;
+  margin-top: 150px;
+  margin-left: 150px;
+}
+.m2 {
+  font-size: 40px;
+  font-weight: 400;
+  font: mulish;
+  margin-left: 150px;
+}
