@@ -1,17 +1,15 @@
 import Button from "@mui/material/Button";
-import { useState, useEffect } from "react";
-import axios from "axios";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { Typography } from "@mui/material";
 import { Container } from "@mui/system";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import Group from "../image/group.png";
-import { useNavigate } from "react-router-dom";
 
-export const Boginoo = () => {
-  const [value, setValue] = useState("");
+export const SignIn = () => {
   const [data, setData] = useState([]);
-  const navigate = useNavigate();
+  const [value, setValue] = useState("");
   const createData = async () => {
     let random = (Math.random() + 1).toString(36).substring(7);
     console.log(random);
@@ -20,6 +18,8 @@ export const Boginoo = () => {
         original: value,
         short: random,
       });
+      const temp = [...res.data, data];
+      setData(temp);
       console.log(res);
       setValue("");
     } catch (error) {
@@ -37,6 +37,7 @@ export const Boginoo = () => {
     };
     fetchData();
   }, []);
+  console.log(data);
   return (
     <Container>
       <Box
@@ -89,23 +90,41 @@ export const Boginoo = () => {
           <Button
             variant="outlined"
             height={44}
-            onClick={() => {
-              createData();
-              navigate(`/shortened`);
-            }}
             sx={{
               backgroundColor: "#02B589",
               color: "white",
               height: "55px",
               borderRadius: "100px",
             }}
+            onClick={() => createData()}
           >
             Богино
           </Button>
+        </Box>
+        <Box>
+          {data?.map((e, index) => {
+            return (
+              <div
+                key={index}
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  gap: "50px",
+                  width: "50vw",
+                }}
+              >
+                <p>Өгөгдсөн холбоос: {e.original}</p>
+                <p>
+                  Богино холбоос:{" "}
+                  <a href={`${e.short}`}>http://localhost/3000/{e.short}</a>
+                </p>
+              </div>
+            );
+          })}
         </Box>
       </Box>
     </Container>
   );
 };
 
-export default Boginoo;
+export default SignIn;

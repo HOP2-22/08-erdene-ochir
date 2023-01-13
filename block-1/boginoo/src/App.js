@@ -1,19 +1,27 @@
-import "./App.css";
-import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Layout from "./layout/Layout";
+import { Boginoo } from "./components/Header";
+import { Shortened } from "./components/footer";
+import { Login } from "./components/login";
+import { SignIn } from "./components/signIn";
+import { Box } from "@mui/system";
+import Header from "./layout/HHeader";
+import Footer from "./layout/FFooter";
 
-const App = () => {
+function App() {
   return (
     <BrowserRouter>
-      <Layout>
+      <Box>
+        <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Boginoo />} />
+          <Route path="/shortened" element={<Shortened />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signIn" element={<SignIn />} />
         </Routes>
-      </Layout>
+        <Footer />
+      </Box>
     </BrowserRouter>
   );
-};
+}
 
 export default App;
