@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { Typography } from "@mui/material";
 import { Container } from "@mui/system";
-import Group from "../image/group.png";
+import Link from "../image/link.png";
 import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
@@ -31,7 +31,7 @@ export const Login = () => {
             alignItems: "center",
           }}
         >
-          <img src={Group} alt="group" />
+          <img src={Link} alt="Link" />
           <Typography
             sx={{ fontFamily: "Lobster", fontSize: "56px", color: "#02B589" }}
           >
@@ -41,14 +41,14 @@ export const Login = () => {
             <Typography sx={{ fontSize: "56px", color: "#02B589" }}>
               Нэвтрэх
             </Typography>
-            <Typography sx={{}}>Цахим хаяг</Typography>
+            <Typography sx={{}}>Email</Typography>
             <TextField
               id="outlined-basic"
-              label="unknown@gmail.com"
+              label="email"
               variant="outlined"
               sx={{ width: "30vw", padding: "0" }}
             />
-            <Typography sx={{}}>Нууц үг</Typography>
+            <Typography sx={{}}>Password</Typography>
             <TextField
               id="outlined-basic"
               label=".........."
@@ -56,7 +56,7 @@ export const Login = () => {
               sx={{ width: "30vw", padding: "0" }}
             />
             <Button>
-              Бүртгүүлэх
+              login
             </Button>
           </Box>
         </Box>

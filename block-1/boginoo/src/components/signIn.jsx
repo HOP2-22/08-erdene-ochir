@@ -5,7 +5,7 @@ import { Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Group from "../image/group.png";
+import Link from "../image/link.png";
 
 export const SignIn = () => {
   const [data, setData] = useState([]);
@@ -60,7 +60,7 @@ export const SignIn = () => {
             alignItems: "center",
           }}
         >
-          <img src={Group} alt="group" />
+          <img src={Link} alt="Link" />
           <Typography
             sx={{ fontFamily: "Lobster", fontSize: "56px", color: "#02B589" }}
           >
