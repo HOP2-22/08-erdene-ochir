@@ -1,6 +1,18 @@
-const User = require("../model/user");
+const User = require("../model/userModel");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+
+const ACCESS_TOKEN_KEY = "secret123";
+
+
+const getUser = async (req, res) => {
+  if (!req.headers.token) {
+    return res.status(401).json({ message: "No token provided" });
+  }
+  const data = await jwt.decode(req.headers.token, ACCESS_TOKEN_KEY);
+  console.log(data);
+  return res.status(200).json(data);
+}
 
 const register = async (req, res) => {
   try {
@@ -18,7 +30,6 @@ const register = async (req, res) => {
   }
 };
 
-const ACCESS_TOKEN_KEY = "secret123";
 
 const login = async (req, res) => {
   const { email, password } = req.body;
@@ -45,4 +56,5 @@ const login = async (req, res) => {
 module.exports = {
   register,
   login,
+  getUser
 };

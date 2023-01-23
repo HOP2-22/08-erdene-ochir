@@ -1,25 +1,30 @@
 import Button from "@mui/material/Button";
 import { useState, useEffect } from "react";
+import axios from "axios";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import Link from "../image/link.png";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
-import Cookie from 'js-cookie'
-export const Login = () => {
+
+export const Create = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-   const login = async () => {
+  const [verifyPassword, setVerifyPassword] = useState('');
+
+   const create = async () => {
+    if (password != verifyPassword) {
+      alert("Passwords do not match");
+      return;
+    }
     try {
-      const res = await axios.post('http://localhost:8000/login',{
+      const res = await axios.post('http://localhost:8000',{
         email: email, 
         password: password
       });
-      Cookie.set("token", res.data.token);
-      navigate('/');
+      navigate('/login');
     } catch (e) {
       console.log(e);
       throw e;
@@ -55,43 +60,39 @@ export const Login = () => {
           </Typography>
           <Box sx={{ display: "flex", flexDirection: "column"}}>
             <Typography sx={{ fontSize: "56px", color: "#02B589" }}>
-              Нэвтрэх
+              Create New Account
             </Typography>
             <Box>
             <Typography sx={{}}>Email</Typography>
             <TextField
               id="outlined-basic"
+              label="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              label="email"
               variant="outlined"
               sx={{ width: "30vw", padding: "0" }}
             />
             <Typography sx={{}}>Password</Typography>
             <TextField
               id="outlined-basic"
+              label=".........."
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              label=".........."
               variant="outlined"
               sx={{ width: "30vw", padding: "0" }}
             />
-            <Button
-          variant="outlined"
-          sx={{
-            backgroundColor: "#02B589",
-            color: "white",
-            width: "183px",
-            height: "44px",
-            borderRadius: "20px",
-            marginTop: "20px"
-          }}
-          onClick={() => {
-            login();
-          }}
-        >
-          login
-        </Button>
+            <Typography sx={{}}>Verify Password</Typography>
+            <TextField
+              id="outlined-basic"
+              label=".........."
+              value={verifyPassword}
+              onChange={(e) => setVerifyPassword(e.target.value)}
+              variant="outlined"
+              sx={{ width: "30vw", padding: "0" }}
+            />
+            <Button onClick={create}>
+              Create Account
+            </Button>
             </Box>
           </Box>
         </Box>
@@ -100,4 +101,4 @@ export const Login = () => {
   );
 };
 
-export default Login;
+export default Create;

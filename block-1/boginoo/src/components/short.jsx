@@ -116,7 +116,7 @@ export const SignIn = () => {
                 <p>Өгөгдсөн холбоос: {e.original}</p>
                 <p>
                   Богино холбоос:{" "}
-                  <a href={`${e.short}`}>http://localhost/3000/{e.short}</a>
+                  <a href={`${e.short}`}>http://localhost/8000/{e.short}</a>
                 </p>
               </div>
             );

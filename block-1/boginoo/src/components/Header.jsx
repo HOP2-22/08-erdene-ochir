@@ -8,35 +8,20 @@ import { Container } from "@mui/system";
 import Link from "../image/link.png";
 import { useNavigate } from "react-router-dom";
 
-export const Boginoo = () => {
+export const Boginoo = ({user}) => {
   const [value, setValue] = useState("");
-  const [data, setData] = useState([]);
-  const navigate = useNavigate();
+  const [data, setData] = useState(null);
   const createData = async () => {
-    let random = (Math.random() + 1).toString(36).substring(7);
-    console.log(random);
     try {
-      const res = await axios.post("http://localhost:8000/short/create", {
-        original: value,
-        short: random,
+      const res = await axios.post("http://localhost:8000/url/create", {
+        orignal: value,
+        user: user,
       });
-      console.log(res);
-      setValue("");
+      setData(res.data);
     } catch (error) {
       console.log(error);
     }
   };
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const { data } = await axios.get("http://localhost:8000/short");
-        setData(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchData();
-  }, []);
   return (
     <Container>
       <Box
@@ -91,7 +76,7 @@ export const Boginoo = () => {
             height={44}
             onClick={() => {
               createData();
-              navigate(`/shortened`);
+              // navigate(`/shortened`);
             }}
             sx={{
               backgroundColor: "#02B589",
@@ -102,6 +87,32 @@ export const Boginoo = () => {
           >
             Богино
           </Button>
+        </Box>
+        <Box>
+          {data && (
+            <Box
+              sx={{
+                width: "100%",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "40px",
+              }}
+            >
+              <Typography
+                sx={{
+                  fontFamily: "Lobster",
+                  fontSize: "22px",
+                  color: "#02B589",
+                }}
+              >
+                Original: {data.orignal}
+                <br />
+                Short: {'localhost:3000/' + data.short}
+              </Typography>
+            </Box>
+          )}
         </Box>
       </Box>
     </Container>

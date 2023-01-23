@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .inp{
+    border:none;
+    height: 40px;
+    width: 350px;
+    border-radius: 10px;
+    background-color: rgb(202, 237, 249);
+  }
+  .ad{
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 60px;
+    margin-left: 30px;
+    background-color: rgb(202, 237, 249);
+    color: rgb(95, 106, 255);
+  }
+  .listContainer { 
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(202, 237, 249);
+    margin-top: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 450px;
+    height: 35px;
+  }
+  .del {
+    background-color: rgb(202, 237, 249);
+    border: none;
+  }
+  .check{
+    background-color: rgb(202, 237, 249);
+    border: none;
+  }
+  .garchig{
+    color: white;
+  }
+  .delall{
+    margin-top: 30px;
+    border: none;
+    border-radius: 10px;
+    height: 35px;
+    width: 100px;
+    color: rgb(95, 106, 255);
+    background-color: rgb(202, 237, 249);
+  }
