@@ -23,7 +23,7 @@ exports.createUrl = async (req, res) => {
         const newUrl = await Url.create({
             orignal: orignal,
             short: code,
-            owner: req.body.user ? req.body.user : 'owner',
+            owner: req.body.owner ? req.body.user : 'owner',
         })
         res.status(201).json(newUrl)
     } catch (err) {
@@ -43,6 +43,22 @@ exports.getUrl  = async (req, res) => {
         });
         res.status(200).json(url);
     } catch (err) {
+        console.log(err)
+        res.status(500).json(err)
+    }
+}
+exports.getHistory = async (req, res) => {
+    if (!req.params.email) {
+        res.status(400).json({
+            message: "Please provide the email"
+        });
+    }
+    try {
+        const history = await Url.find({
+            owner: req.params.email,
+        });
+        res.status(200).json(history);
+    }catch (err) {
         console.log(err)
         res.status(500).json(err)
     }

@@ -1,20 +1,21 @@
+import { Divider } from "@mui/material";
 import React from "react";
 import { useState } from "react";
 import "../Ap.css"
 
-export const List = ({ text, list, setList, index }) => {
-    const [checked, setChecked] = useState(false);
+export const List = ({history}) => {
+    
     return (
         <div className="listContainer">
-            <input className="check" type={"checkbox"} value={checked} onChange={(e) => {
-                setChecked(e.target.checked);
-            }} />
-            <div style={{
-                textDecoration: checked ? 'line-through' : 'none'
-            }}>{text}</div>
-            <button className="del" onClick={() => {
-                setList(list.filter((_, i) => i !== index));
-            }}>🗑</button>
+            <div>
+                {history.orignal}
+            </div>
+            <div>
+                <a href={`http://localhost:3000/${history.short}`}>
+                http://localhost:3000/{history.short}
+                </a>
+            </div>
+            <Divider/>
         </div>
     )
 }

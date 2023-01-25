@@ -7,16 +7,16 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Link from "../image/link.png";
 
-export const SignIn = () => {
+export const SignIn = ({user}) => {
   const [data, setData] = useState([]);
   const [value, setValue] = useState("");
   const createData = async () => {
     let random = (Math.random() + 1).toString(36).substring(7);
-    console.log(random);
     try {
       const res = await axios.post("http://localhost:8000/short/create", {
         original: value,
         short: random,
+        owner: user,
       });
       const temp = [...res.data, data];
       setData(temp);

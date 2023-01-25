@@ -38,7 +38,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/create" element={<Create />} />
           <Route path="/:id" element={<Shortened />} />
-          <Route path="/history" element={<History />} />
+          <Route path="/history/:email" element={<History />} />
           {/* <Route path="/shortened" element={<Shortened />} /> */}
           {/* <Route path="/signIn" element={<SignIn />} /> */}
         </Routes>

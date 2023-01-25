@@ -9,7 +9,6 @@ import { token } from "js-token";
 
 export const Header = ({ user }) => {
   const navigate = useNavigate();
-  console.log(user);
   return (
     <Container>
       <Box
@@ -41,7 +40,7 @@ export const Header = ({ user }) => {
                   marginTop: "20px",
                 }}
                 onClick={() => {
-                  navigate(`history`);
+                  navigate(`history/${user}`);
                 }}
               >
                 History
