@@ -13,7 +13,7 @@ export const SignIn = ({user}) => {
   const createData = async () => {
     let random = (Math.random() + 1).toString(36).substring(7);
     try {
-      const res = await axios.post("http://localhost:8000/short/create", {
+      const res = await axios.post("https://eo-boginoo-back.onrender.com/short/create", {
         original: value,
         short: random,
         owner: user,
@@ -29,7 +29,7 @@ export const SignIn = ({user}) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { data } = await axios.get("http://localhost:8000/short");
+        const { data } = await axios.get("https://eo-boginoo-back.onrender.com/short");
         setData(data);
       } catch (error) {
         console.log(error);

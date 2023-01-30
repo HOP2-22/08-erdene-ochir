@@ -13,7 +13,7 @@ export const Boginoo = ({user}) => {
   const [data, setData] = useState(null);
   const createData = async () => {
     try {
-      const res = await axios.post("http://localhost:8000/url/create", {
+      const res = await axios.post("https://eo-boginoo-back.onrender.com/url/create", {
         orignal: value,
         user: user,
       });
@@ -109,7 +109,7 @@ export const Boginoo = ({user}) => {
               >
                 Original: {data.orignal}
                 <br />
-                Short: {'localhost:3000/' + data.short}
+                Short: {'https://eo-boginoo.web.app/' + data.short}
               </Typography>
             </Box>
           )}

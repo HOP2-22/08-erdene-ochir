@@ -8,7 +8,7 @@ export const Shortened = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:8000/url/${id}`);
+        const { data } = await axios.get(`https://eo-boginoo-back.onrender.com/url/${id}`);
         window.location.replace(data.orignal)
       } catch (error) {
         console.log(error);

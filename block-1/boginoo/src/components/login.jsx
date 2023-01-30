@@ -14,7 +14,7 @@ export const Login = () => {
   const [password, setPassword] = useState('');
    const login = async () => {
     try {
-      const res = await axios.post('http://localhost:8000/login',{
+      const res = await axios.post('https://eo-boginoo-back.onrender.com/login',{
         email: email, 
         password: password
       });

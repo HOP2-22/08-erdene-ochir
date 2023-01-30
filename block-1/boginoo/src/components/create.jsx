@@ -20,7 +20,7 @@ export const Create = () => {
       return;
     }
     try {
-      const res = await axios.post('http://localhost:8000',{
+      const res = await axios.post('https://eo-boginoo-back.onrender.com',{
         email: email, 
         password: password
       });

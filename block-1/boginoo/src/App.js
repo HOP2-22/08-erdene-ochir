@@ -23,7 +23,7 @@ function App() {
 
   useEffect(() => {
     const getData = async () => {
-      const res = await axios.get('http://localhost:8000/');
+      const res = await axios.get('https://eo-boginoo-back.onrender.com/');
       console.log(res);
       setUser(res.data.user);
     };

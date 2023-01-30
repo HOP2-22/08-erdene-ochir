@@ -10,7 +10,7 @@ function History() {
   const [list, setList] = useState([])
   useEffect( ()=> {
     const fetchData = async() => {
-      const data = await axios.get(`http://localhost:8000/url/history/${email}`)
+      const data = await axios.get(`https://eo-boginoo-back.onrender.com/url/history/${email}`)
       // console.log(data)
       setList(data.data)
     };
