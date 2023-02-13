@@ -1,12 +1,14 @@
 import React from 'react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import { Link } from "react-scroll"; 
+import PIC from '../Pic.png';
+
 
 const Home = () => {
   return (
     <div
     name="home"
-    className="h-screen w-full bg-[#0a192f]"
+    className="w-full pt-8"
   >
     <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
       <div className="flex flex-col justify-center h-full">
@@ -14,9 +16,9 @@ const Home = () => {
           I'm a Full Stack Web Developer
         </h2>
         <p className="text-gray-500 py-4 max-w-md">
-           I have 4 years of experience in graphics design and web development.
+           I have 9 months of experience in web development.
           Currently, I love to work on web application using technologies like
-          React, Tailwind, Next.js and Mongodb.
+          React, Tailwind and Mongodb.
         </p>
         <div>
           <Link
@@ -34,7 +36,8 @@ const Home = () => {
       </div>
       <div>
         <img
-          alt="my profile"
+        style={{height:"300px",width:"400px",borderRadius:"50px",border:"transperant black 10px", marginBottom:"50px"}}
+        src={PIC}
           className="rounded-2xl mx-auto w-2/3 md:w-full"
         />
       </div>
